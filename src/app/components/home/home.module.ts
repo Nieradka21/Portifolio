@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -16,6 +17,7 @@ import { MatListModule } from '@angular/material/list';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatListModule,
+    MatDialogModule,
   ],
 })
 export class HomeModule {}
