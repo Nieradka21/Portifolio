@@ -18,6 +18,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSidenavModule,
     MatListModule,
     MatDialogModule,
+    
   ],
 })
 export class HomeModule {}

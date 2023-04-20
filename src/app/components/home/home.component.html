@@ -1,21 +1,48 @@
-<mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.aria-hidden]="(drawer.opened | async) ? 'false' : 'true'"
-        [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-        <mat-toolbar>Menu</mat-toolbar>
-        <mat-nav-list>
-            <a mat-list-item routerLink="/" (click)="drawer.close()">Início</a>
-            <a mat-list-item routerLink="/projetos" (click)="drawer.close()">Projetos</a>
-            <a mat-list-item routerLink="/sobre-mim" (click)="drawer.close()">Sobre Mim</a>
-            <a mat-list-item routerLink="/contato" (click)="drawer.close()">Contato</a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <mat-toolbar color="primary">
-            <button mat-icon-button (click)="drawer.toggle()">
-                <mat-icon>menu</mat-icon>
+<div class="sidebar-nav">
+    <nav class="navbar navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <span>Meu Portfólio</span>
-        </mat-toolbar>
-        <!-- Conteúdo da sua página aqui -->
-    </mat-sidenav-content>
-</mat-sidenav-container>
+            <!-- Menus List -->
+            <div class="offcanvas offcanvas-start shadow" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li><a href="#"><i class="bi bi-calendar3"></i> <span class="item-text">Calendar</span></a></li>
+                        <li><a href="#"><i class="bi bi-pencil-square"></i> <span
+                                    class="item-text">Applications</span></a></li>
+                        <li><a href="#"><i class="bi bi-people"></i> <span class="item-text">Audience</span></a></li>
+                        <li><a href="#"><i class="bi bi-book"></i> <span class="item-text">Books World</span></a></li>
+                        <li><a href="#"><i class="bi bi-person-check"></i> <span class="item-text">Candidates</span></a>
+                        </li>
+                        <li><a href="#"><i class="bi bi-envelope"></i> <span class="item-text">Email</span></a></li>
+                        <li><a href="#"><i class="bi bi-graph-up"></i> <span class="item-text">Analytics</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="dropdown-toggle text-white text-decoration-none" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="usericon"><i class="bi bi-person-circle"></i></span>
+                    <span class="textnone">Jassa</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item" type="button"><i class="bi bi-lock-fill"></i> Change
+                            Password</button></li>
+                    <li><button class="dropdown-item" type="button"><i class="bi bi-gear-fill"></i> Admin
+                            Setion</button></li>
+                    <li><button class="dropdown-item" type="button"><i class="bi bi-gear-wide-connected"></i> IMAP
+                            Settings</button></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><button class="dropdown-item" type="button"><i class="bi bi-box-arrow-right"></i> Sign
+                            out</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
