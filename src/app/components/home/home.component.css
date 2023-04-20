@@ -1,3 +1,7 @@
-.offcanvas.show {
-  transform: translateX(0%);
+mat-sidenav-container {
+  height: calc(100% - 64px); /* altura da barra superior */
+}
+
+mat-sidenav {
+  width: 200px;
 }

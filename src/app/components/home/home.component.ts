@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 declare var bootstrap: any;
 
@@ -15,5 +16,10 @@ export class HomeComponent implements OnInit {
     let offcanvasList = offcanvasElementList.map(function (offcanvasEl: any) {
       return new bootstrap.Offcanvas(offcanvasEl);
     });
+  }
+
+  toggle() {
+    let drawer = document.querySelector('.drawer') as unknown as MatSidenav;
+    drawer.toggle();
   }
 }
